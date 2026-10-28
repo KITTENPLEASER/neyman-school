@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Политика конфиденциальности: Neyman School</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+<div class="container header__inner">
+<a class="header__logo" href="index.html">Neyman school</a>
+<button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span></button>
+<nav class="header__nav nav" id="main-nav" aria-label="Основное меню"><ul class="nav__list"><li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li><li class="nav__item"><a href="courses.html" class="nav__link">Курсы</a></li><li class="nav__item"><a href="about.html" class="nav__link">О школе</a></li><li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li></ul></nav>
+<a class="header__cart" href="cart.html" aria-label="Корзина"
+   style="position:relative;display:inline-flex;align-items:center;justify-content:center;
+          width:36px;height:36px;color:#fff;text-decoration:none;font-size:1.25rem;">
+  🛒<span class="cart-badge" hidden
+          style="position:absolute;top:-4px;right:-4px;background:var(--blue);color:#fff;
+                 font-size:.7rem;font-weight:700;min-width:18px;height:18px;padding:0 5px;
+                 border-radius:9px;display:flex;align-items:center;justify-content:center;
+                 line-height:1;"></span>
+</a>
+<form class="header__search js-search-form" role="search" style="display:flex;gap:.25rem;align-items:center;">
+  <input type="search" name="q" placeholder="Поиск курсов..." aria-label="Поиск по курсам"
+         style="padding:.4rem .7rem;border-radius:6px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;font:inherit;font-size:.85rem;min-width:160px;">
+  <button class="button button_size_s" type="submit" style="background:var(--blue);color:#fff;padding:.4rem .7rem;">Найти</button>
+</form>
+<a class="header__cta button button_theme_primary button_size_s" href="contacts.html#register">Войти</a>
+</div>
+</header>
+
+<main>
+<section id="search-panel" class="section" hidden style="padding-top:1rem;">
+  <div class="container">
+    <button id="search-close" class="button button_size_s" type="button"
+            style="background:transparent;color:var(--navy);border:1px solid var(--sky);margin-bottom:1rem;">
+      ← Закрыть поиск
+    </button>
+    <div id="search-results"></div>
+  </div>
+</section>
+
+<section class="section">
+<div class="container" style="max-width:820px;">
+<h1>Политика конфиденциальности</h1>
+<p class="form__note">Дата последнего обновления: 14 октября 2026 г.</p>
+
+<div style="display:flex;gap:.5rem;flex-wrap:wrap;margin:1.5rem 0;">
+  <button class="button button_theme_primary" id="download-policy">Скачать документ (.txt)</button>
+  <button class="button button_size_s" id="print-policy"
+          style="background:var(--sky);color:var(--navy);">Печать / PDF</button>
+</div>
+
+<article id="policy-text" style="line-height:1.7;">
+
+<h2>1. Общие положения</h2>
+<p>Настоящая Политика конфиденциальности (далее — Политика) действует в отношении всей информации, которую онлайн-школа «Neyman School» (далее — Школа) может получить о Пользователе во время использования сайта.</p>
+<p>Использование сайта означает безоговорочное согласие Пользователя с настоящей Политикой и указанными в ней условиями обработки персональной информации.</p>
+
+<h2>2. Состав обрабатываемых данных</h2>
+<p>Школа может обрабатывать следующие данные Пользователя:</p>
+<ul class="list">
+  <li>ФИО (имя, указанное при регистрации);</li>
+  <li>адрес электронной почты;</li>
+  <li>номер контактного телефона;</li>
+  <li>имя пользователя (логин);</li>
+  <li>технические данные: IP-адрес, User-Agent, cookies.</li>
+</ul>
+
+<h2>3. Цели обработки данных</h2>
+<p>Персональные данные обрабатываются в следующих целях:</p>
+<ol class="steps">
+  <li>регистрация и авторизация Пользователя на сайте;</li>
+  <li>предоставление доступа к курсам и материалам Школы;</li>
+  <li>обратная связь по обращениям и запросам;</li>
+  <li>улучшение качества сервиса и анализ пользовательского опыта.</li>
+</ol>
+
+<h2>4. Правовые основания</h2>
+<p>Обработка осуществляется на основании согласия Пользователя, выраженного при регистрации (проставление отметки в соответствующем чекбоксе) в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных».</p>
+
+<h2>5. Порядок и условия обработки</h2>
+<p>Обработка персональных данных осуществляется с использованием средств автоматизации. Данные хранятся на защищённых серверах, доступ к ним ограничен.</p>
+<p>Пароли хранятся исключительно в виде криптографических хэшей (алгоритм bcrypt).</p>
+
+<h2>6. Передача данных третьим лицам</h2>
+<p>Школа не передаёт персональные данные Пользователей третьим лицам, за исключением случаев, предусмотренных законодательством РФ.</p>
+
+<h2>7. Сроки хранения</h2>
+<p>Персональные данные хранятся до момента удаления учётной записи Пользователем или до отзыва согласия на обработку.</p>
+
+<h2>8. Права Пользователя</h2>
+<p>Пользователь вправе:</p>
+<ul class="list">
+  <li>получить информацию об обработке своих персональных данных;</li>
+  <li>требовать уточнения, блокирования или уничтожения данных;</li>
+  <li>отозвать согласие на обработку персональных данных.</li>
+</ul>
+
+<h2>9. Cookies</h2>
+<p>Сайт использует cookies и localStorage для сохранения сессии авторизации и состояния корзины. Пользователь может отключить cookies в настройках браузера.</p>
+
+<h2>10. Контактная информация</h2>
+<p>По вопросам обработки персональных данных обращайтесь:</p>
+<ul class="list">
+  <li>Email: <a href="mailto:support@neyman.school">support@neyman.school</a></li>
+  <li>Телефон: <a href="tel:+74950000000">+7 (495) 000-00-00</a></li>
+  <li>Адрес: г. Москва, Вадковский переулок, 1</li>
+</ul>
+
+<p style="margin-top:2rem;">© 2026 Онлайн-школа «Neyman School». Все права защищены.</p>
+
+</article>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<div class="container">
+<div class="footer__inner">
+<div class="footer__col"><h2 class="footer__title">Neyman school</h2><p>Онлайн-школа для тех, кто хочет освоить новую профессию.</p></div>
+<nav class="footer__col" aria-label="Разделы"><h2 class="footer__title">Разделы</h2><a class="footer__link" href="courses.html">Курсы</a><a class="footer__link" href="about.html">О школе</a><a class="footer__link" href="contacts.html">Контакты</a><a class="footer__link" href="privacy.html">Политика конфиденциальности</a></nav>
+<div class="footer__col"><h2 class="footer__title">Связь</h2><a class="footer__link" href="mailto:support@neyman.school">support@neyman.school</a><a class="footer__link" href="tel:+74950000000">+7 (495) 000-00-00</a></div>
+</div>
+<p class="footer__copy">Онлайн-школа Neyman 2026 © Все права защищены.</p>
+</div>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/script.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/search.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/privacy.js"></script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Онлайн-школа Neyman</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+<div class="container header__inner">
+<a class="header__logo" href="index.html">Neyman school</a>
+<button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span></button>
+<nav class="header__nav nav" id="main-nav" aria-label="Основное меню"><ul class="nav__list"><li class="nav__item"><a href="index.html" class="nav__link nav__link_active" aria-current="page">Главная</a></li><li class="nav__item"><a href="courses.html" class="nav__link">Курсы</a></li><li class="nav__item"><a href="about.html" class="nav__link">О школе</a></li><li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li></ul></nav>
+<a class="header__cart" href="cart.html" aria-label="Корзина"
+   style="position:relative;display:inline-flex;align-items:center;justify-content:center;
+          width:36px;height:36px;color:#fff;text-decoration:none;font-size:1.25rem;">
+  🛒<span class="cart-badge" hidden
+          style="position:absolute;top:-4px;right:-4px;background:var(--blue);color:#fff;
+                 font-size:.7rem;font-weight:700;min-width:18px;height:18px;padding:0 5px;
+                 border-radius:9px;display:flex;align-items:center;justify-content:center;
+                 line-height:1;"></span>
+</a>
+<form class="header__search js-search-form" role="search" style="display:flex;gap:.25rem;align-items:center;">
+  <input type="search" name="q" placeholder="Поиск курсов..." aria-label="Поиск по курсам"
+         style="padding:.4rem .7rem;border-radius:6px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;font:inherit;font-size:.85rem;min-width:160px;">
+  <button class="button button_size_s" type="submit" style="background:var(--blue);color:#fff;padding:.4rem .7rem;">Найти</button>
+</form>
+<a class="header__cta button button_theme_primary button_size_s" href="contacts.html#register">Войти</a>
+</div>
+</header>
+<main>
+
+<section id="search-panel" class="section" hidden style="padding-top:1rem;">
+  <div class="container">
+    <button id="search-close" class="button button_size_s" type="button"
+            style="background:transparent;color:var(--navy);border:1px solid var(--sky);margin-bottom:1rem;">
+      ← Закрыть поиск
+    </button>
+    <div id="search-results"></div>
+  </div>
+</section>
+
+<section class="section section_dark hero hero_wave">
+<div class="container split">
+<div class="split__text">
+<h1>Освойте новую профессию с <span class="mark">Neyman</span></h1>
+<section class="section">
+    <div class="container">
+    <div class="slider" id="slider">
+      <div class="slider__track" id="slider-track">
+    
+        <div class="slider__slide" style="background:linear-gradient(120deg,#043873,#4f9cf9);">
+          <h3>Скидка 20% на курс «Python»</h3>
+          <p>Только до конца октября — для новых студентов. Освойте Python с нуля и напишите первого Telegram-бота.</p>
+          <a class="button button_theme_primary" href="course.html?alias=python" style="align-self:flex-start;">Смотреть курс</a>
+        </div>
+    
+        <div class="slider__slide" style="background:linear-gradient(120deg,#212529,#043873);">
+          <h3>Новый поток UI/UX — старт 13 октября</h3>
+          <p>Макет мобильного приложения в Figma, разбор кейсов, портфолио на выходе.</p>
+          <a class="button button_theme_primary" href="course.html?alias=ui-ux" style="align-self:flex-start;">Записаться</a>
+        </div>
+    
+        <div class="slider__slide" style="background:linear-gradient(120deg,#043873,#212529);">
+          <h3>3000+ выпускников с 2021 года</h3>
+          <p>Помогаем с резюме и трудоустройством. Небольшие группы, поддержка наставника.</p>
+          <a class="button button_theme_primary" href="about.html" style="align-self:flex-start;">О школе</a>
+        </div>
+    
+      </div>
+    
+      <button class="slider__btn slider__btn_prev" type="button" aria-label="Предыдущий слайд" id="slider-prev">‹</button>
+      <button class="slider__btn slider__btn_next" type="button" aria-label="Следующий слайд" id="slider-next">›</button>
+    
+      <div class="slider__dots" id="slider-dots"></div>
+    </div>
+    </div>
+    </section>
+<p>Онлайн-курсы по программированию, дизайну и маркетингу: практика с первой недели и поддержка наставника.</p>
+<a class="button button_theme_primary" href="courses.html">Выбрать курс</a>
+</div>
+</div>
+</section>
+
+<section class="section pm-block">
+<div class="container split">
+<div class="split__text">
+<h2 class="pm-title">Как проходит<br><span class="pm-title__mark">обучение</span></h2>
+<p class="pm-text">Выбираете курс и записываетесь на поток. Смотрите уроки в удобное время, выполняете задания и получаете обратную связь от наставника. В конце защищаете итоговый проект и получаете сертификат.</p>
+<a class="button button_theme_primary" href="contacts.html">Записаться</a>
+</div>
+<div class="split__media">
+<img class="pm-image" src="img/main.jpg" alt="Студент проходит урок на платформе" width="260" height="180" loading="lazy">
+</div>
+</div>
+</section>
+
+<section class="section section_dark section_center">
+<div class="container"><h2>Почему выбирают нас</h2>
+<div class="grid">
+<section class="card"><h3>Практика</h3><p>Каждый урок заканчивается заданием.</p></section>
+<section class="card"><h3>Наставники</h3><p>Проверяем работы и отвечаем на вопросы.</p></section>
+<section class="card"><h3>Гибкий график</h3><p>Учитесь с телефона или компьютера.</p></section>
+</div></div>
+</section>
+
+<section class="section section_center">
+<div class="container"><h2>Отзывы студентов</h2>
+<div class="reviews">
+<section class="card card_quote">
+<img class="card__photo card__photo_round" src="img/sasha.jpg" alt="Фото: Александр Левин" width="80" height="80" loading="lazy">
+<blockquote>Я бросил стримить. Через три месяца собрал портфолио и нашёл первую работу.</blockquote>
+<p>Александр, выпускник курса «Веб-разработка»</p>
+</section>
+<section class="card card_quote">
+<img class="card__photo card__photo_round" src="img/liza.webp" alt="Фото: Елизавета Мопсик" width="80" height="80" loading="lazy">
+<blockquote>Перестала руинить паблики, начала заниматься делом. Удобный формат: уроки в записи и живые разборы по вечерам.</blockquote>
+<p>Елизавета, выпускница курса «UI/UX»</p>
+</section>
+</div></div>
+</section>
+
+</main>
+<footer class="footer">
+<div class="container">
+<div class="footer__inner">
+<div class="footer__col"><h2 class="footer__title">Neyman school</h2><p>Онлайн-школа для тех, кто хочет освоить новую профессию.</p></div>
+<nav class="footer__col" aria-label="Разделы"><h2 class="footer__title">Разделы</h2><a class="footer__link" href="courses.html">Курсы</a><a class="footer__link" href="about.html">О школе</a><a class="footer__link" href="contacts.html">Контакты</a><a class="footer__link" href="privacy.html">Политика конфиденциальности</a></nav>
+<div class="footer__col"><h2 class="footer__title">Связь</h2><a class="footer__link" href="mailto:support@neyman.school">support@neyman.school</a><a class="footer__link" href="tel:+74950000000">+7 (495) 000-00-00</a></div>
+</div>
+<p class="footer__copy">Онлайн-школа Neyman 2026 © Все права защищены.</p>
+</div>
+</footer>
+<script src="js/api.js"></script>
+<script src="js/script.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/search.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/slider.js"></script>
+</body>
+</html>

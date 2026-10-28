@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Админка: Neyman School</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+<div class="container header__inner">
+<a class="header__logo" href="index.html">Neyman school</a>
+<button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span></button>
+<nav class="header__nav nav" id="main-nav" aria-label="Основное меню"><ul class="nav__list"><li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li><li class="nav__item"><a href="courses.html" class="nav__link">Курсы</a></li><li class="nav__item"><a href="about.html" class="nav__link">О школе</a></li><li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li></ul></nav>
+<a class="header__cart" href="cart.html" aria-label="Корзина"
+   style="position:relative;display:inline-flex;align-items:center;justify-content:center;
+          width:36px;height:36px;color:#fff;text-decoration:none;font-size:1.25rem;">
+  🛒<span class="cart-badge" hidden
+          style="position:absolute;top:-4px;right:-4px;background:var(--blue);color:#fff;
+                 font-size:.7rem;font-weight:700;min-width:18px;height:18px;padding:0 5px;
+                 border-radius:9px;display:flex;align-items:center;justify-content:center;
+                 line-height:1;"></span>
+</a>
+<form class="header__search js-search-form" role="search" style="display:flex;gap:.25rem;align-items:center;">
+  <input type="search" name="q" placeholder="Поиск курсов..." aria-label="Поиск по курсам"
+         style="padding:.4rem .7rem;border-radius:6px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;font:inherit;font-size:.85rem;min-width:160px;">
+  <button class="button button_size_s" type="submit" style="background:var(--blue);color:#fff;padding:.4rem .7rem;">Найти</button>
+</form>
+<a class="header__cta button button_theme_primary button_size_s" href="contacts.html#register">Войти</a>
+</div>
+</header>
+
+<main>
+<section id="search-panel" class="section" hidden style="padding-top:1rem;">
+  <div class="container">
+    <button id="search-close" class="button button_size_s" type="button"
+            style="background:transparent;color:var(--navy);border:1px solid var(--sky);margin-bottom:1rem;">
+      ← Закрыть поиск
+    </button>
+    <div id="search-results"></div>
+  </div>
+</section>
+
+<section class="section">
+<div class="container">
+<h1>Админ-панель</h1>
+<p id="admin-greeting" class="form__note">Загрузка...</p>
+
+<div id="admin-tabs" class="tabs" role="tablist">
+<button class="tabs__btn tabs__btn_active" data-tab="tab-products" role="tab">Курсы</button>
+<button class="tabs__btn" data-tab="tab-categories" role="tab">Категории</button>
+<button class="tabs__btn" data-tab="tab-users" role="tab">Пользователи</button>
+<button class="tabs__btn" data-tab="tab-feedback" role="tab">Обращения</button>
+</div>
+
+<!-- ===== ПРОДУКТЫ ===== -->
+<section class="tab-panel tab-panel_active" id="tab-products" role="tabpanel">
+<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem;">
+<h2 style="margin:0;">Курсы</h2>
+<button class="button button_theme_primary button_size_s" id="product-new">+ Новый курс</button>
+</div>
+<div id="products-admin"></div>
+</section>
+
+<!-- ===== КАТЕГОРИИ ===== -->
+<section class="tab-panel" id="tab-categories" role="tabpanel">
+<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem;">
+<h2 style="margin:0;">Категории</h2>
+<button class="button button_theme_primary button_size_s" id="category-new">+ Новая категория</button>
+</div>
+<div id="categories-admin"></div>
+</section>
+
+<!-- ===== ПОЛЬЗОВАТЕЛИ ===== -->
+<section class="tab-panel" id="tab-users" role="tabpanel">
+<h2>Пользователи</h2>
+<div id="users-admin"></div>
+</section>
+
+<!-- ===== ОБРАТНАЯ СВЯЗЬ ===== -->
+<section class="tab-panel" id="tab-feedback" role="tabpanel">
+<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem;">
+<h2 style="margin:0;">Обращения</h2>
+<div style="display:flex;gap:.5rem;align-items:center;">
+  <label for="fb-filter" class="form__note">Статус:</label>
+  <select id="fb-filter" class="form__input" style="max-width:180px;">
+    <option value="">Все</option>
+    <option value="new">Новые</option>
+    <option value="in_progress">В работе</option>
+    <option value="resolved">Решённые</option>
+  </select>
+</div>
+</div>
+<div id="feedback-admin"></div>
+</section>
+
+</div>
+</section>
+</main>
+
+<!-- ===== МОДАЛЬНОЕ ОКНО ===== -->
+<div id="modal" class="modal" hidden>
+  <div class="modal__backdrop" data-close="1"></div>
+  <div class="modal__window" role="dialog" aria-modal="true">
+    <button class="modal__close" type="button" data-close="1" aria-label="Закрыть">×</button>
+    <h2 id="modal-title" style="margin-top:0;">Заголовок</h2>
+    <form id="modal-form" class="form" style="border:0;padding:0;"></form>
+  </div>
+</div>
+
+<footer class="footer">
+<div class="container">
+<div class="footer__inner">
+<div class="footer__col"><h2 class="footer__title">Neyman school</h2><p>Онлайн-школа для тех, кто хочет освоить новую профессию.</p></div>
+<nav class="footer__col" aria-label="Разделы"><h2 class="footer__title">Разделы</h2><a class="footer__link" href="courses.html">Курсы</a><a class="footer__link" href="about.html">О школе</a><a class="footer__link" href="contacts.html">Контакты</a><a class="footer__link" href="privacy.html">Политика конфиденциальности</a></nav>
+<div class="footer__col"><h2 class="footer__title">Связь</h2><a class="footer__link" href="mailto:support@neyman.school">support@neyman.school</a><a class="footer__link" href="tel:+74950000000">+7 (495) 000-00-00</a></div>
+</div>
+<p class="footer__copy">Онлайн-школа Neyman 2026 © Все права защищены.</p>
+</div>
+</footer>
+
+<script src="js/api.js"></script>
+<script src="js/script.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/search.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/admin.js?v=2"></script>
+</body>
+</html>

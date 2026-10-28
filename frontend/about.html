@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>О школе: Neyman School</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="header">
+<div class="container header__inner">
+<a class="header__logo" href="index.html">Neyman school</a>
+<button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span class="burger__line"></span><span class="burger__line"></span><span class="burger__line"></span></button>
+<nav class="header__nav nav" id="main-nav" aria-label="Основное меню"><ul class="nav__list"><li class="nav__item"><a href="index.html" class="nav__link">Главная</a></li><li class="nav__item"><a href="courses.html" class="nav__link">Курсы</a></li><li class="nav__item"><a href="about.html" class="nav__link nav__link_active" aria-current="page">О школе</a></li><li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li></ul></nav>
+<a class="header__cart" href="cart.html" aria-label="Корзина"
+   style="position:relative;display:inline-flex;align-items:center;justify-content:center;
+          width:36px;height:36px;color:#fff;text-decoration:none;font-size:1.25rem;">
+  🛒<span class="cart-badge" hidden
+          style="position:absolute;top:-4px;right:-4px;background:var(--blue);color:#fff;
+                 font-size:.7rem;font-weight:700;min-width:18px;height:18px;padding:0 5px;
+                 border-radius:9px;display:flex;align-items:center;justify-content:center;
+                 line-height:1;"></span>
+</a>
+<form class="header__search js-search-form" role="search" style="display:flex;gap:.25rem;align-items:center;">
+  <input type="search" name="q" placeholder="Поиск курсов..." aria-label="Поиск по курсам"
+         style="padding:.4rem .7rem;border-radius:6px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);color:#fff;font:inherit;font-size:.85rem;min-width:160px;">
+  <button class="button button_size_s" type="submit" style="background:var(--blue);color:#fff;padding:.4rem .7rem;">Найти</button>
+</form>
+<a class="header__cta button button_theme_secondary button_size_s" href="contacts.html#register">Войти</a>
+</div>
+</header>
+<main>
+<section id="search-panel" class="section" hidden style="padding-top:1rem;">
+  <div class="container">
+    <button id="search-close" class="button button_size_s" type="button"
+            style="background:transparent;color:var(--navy);border:1px solid var(--sky);margin-bottom:1rem;">
+      ← Закрыть поиск
+    </button>
+    <div id="search-results"></div>
+  </div>
+</section>
+
+<section class="section">
+<div class="container split">
+<div class="split__text">
+<h1>О школе</h1>
+<p>Мы учим практическим навыкам, которые нужны на работе. С 2021 года выпустили более 3000 студентов.</p>
+<ul class="list">
+<li>Небольшие группы до 20 человек</li>
+<li>Проекты для портфолио</li>
+<li>Помощь с резюме</li>
+</ul>
+</div>
+<div class="split__media">
+<section class="card">
+<img class="card__photo" src="img/school.jpg" alt="Команда школы на встрече" width="640" height="400" loading="lazy">
+</section>
+</div>
+</div>
+</section>
+<section class="section section_dark">
+<div class="container">
+<h2>Команда</h2>
+<div class="grid grid_4">
+<section class="card"><img class="card__photo" src="img/ann.jpg" alt="Фото: Анна Орлова" width="640" height="400" loading="lazy"><h3>Анна Орлова</h3><p>Руководитель школы</p></section>
+<section class="card"><img class="card__photo" src="img/gor.jpg" alt="Фото: Игорь Смирнов" width="640" height="400" loading="lazy"><h3>Игорь Смирнов</h3><p>Преподаватель веб-разработки</p></section>
+<section class="card"><img class="card__photo" src="img/elena.jpg" alt="Фото: Елена Ким" width="640" height="400" loading="lazy"><h3>Елена Ким</h3><p>Преподаватель дизайна</p></section>
+<section class="card"><img class="card__photo" src="img/pavel.jpg" alt="Фото: Павел Леонов" width="640" height="400" loading="lazy"><h3>Павел Леонов</h3><p>Преподаватель маркетинга</p></section>
+</div>
+</div>
+</section>
+</main>
+<footer class="footer">
+<div class="container">
+<div class="footer__inner">
+<div class="footer__col"><h2 class="footer__title">Neyman school</h2><p>Онлайн-школа для тех, кто хочет освоить новую профессию.</p></div>
+<nav class="footer__col" aria-label="Разделы"><h2 class="footer__title">Разделы</h2><a class="footer__link" href="courses.html">Курсы</a><a class="footer__link" href="about.html">О школе</a><a class="footer__link" href="contacts.html">Контакты</a><a class="footer__link" href="privacy.html">Политика конфиденциальности</a></nav>
+<div class="footer__col"><h2 class="footer__title">Связь</h2><a class="footer__link" href="mailto:support@neyman.school">support@neyman.school</a><a class="footer__link" href="tel:+74950000000">+7 (495) 000-00-00</a></div>
+</div>
+<p class="footer__copy">Онлайн-школа Neyman 2026 © Все права защищены.</p>
+</div>
+</footer>
+<script src="js/api.js"></script>
+<script src="js/script.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/search.js"></script>
+<script src="js/cart.js"></script>
+</body>
+</html>
