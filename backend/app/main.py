@@ -11,6 +11,13 @@ from app.routers import actions, admin, auth, cart, feedback, health, products, 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+
+    from app.database import Base
+    from app import models
+    Base.metadata.create_all(bind=engine)
+    print("[startup] Tables ensured")
+
+
     try:
         with engine.connect() as conn:
             conn.execute(text("SELECT 1"))

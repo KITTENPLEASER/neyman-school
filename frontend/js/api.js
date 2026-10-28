@@ -3,7 +3,7 @@
    Обёртка над fetch с автоматическим JWT (access + refresh) и хранением в localStorage.
    ========================================================================== */
 
-   const API_BASE = 'http://127.0.0.1:8000/api';
+   const API_BASE = 'https://neyman-school.de1.netrun.io/api';
 
    const API = {
      // --- storage keys ---
