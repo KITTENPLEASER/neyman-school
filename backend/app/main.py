@@ -17,6 +17,19 @@ async def lifespan(app: FastAPI):
     Base.metadata.create_all(bind=engine)
     print("[startup] Tables ensured")
 
+    try:
+        from app.seed import seed
+        from app.database import SessionLocal
+        from app.models.product import Product
+        from sqlalchemy import select
+        
+        db = SessionLocal()
+        if not db.scalars(select(Product)).first():
+            print("[startup] Database is empty. Running seed...")
+            seed()
+        db.close()
+    except Exception as e:
+        print(f"[startup] Seed failed: {e}")
 
     try:
         with engine.connect() as conn:
